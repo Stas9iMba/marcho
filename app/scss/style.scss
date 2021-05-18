@@ -4,5 +4,65 @@
 @import 'global';
 
 
+.header {
+  padding: 40px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+  &__list-item {
+    &:not(:last-child) {
+      padding-right: 35px;
+    }
+  }
+  &__list-link {
+    color: $title-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.2s linear;
+    @extend %roboto-400;
+    &:hover {
+      border-bottom: 1px solid $accent-color;
+      color: $accent-color;
+      transition: color 0.2s linear;
+      @extend %roboto-500;
+    }
+  }
+  &__list-link--active {
+    color: $accent-color;
+    @extend %roboto-500;
+  }
+}
+
+.user-nav {
+  display: flex;
+  &__link {
+    position: relative;
+    &:not(:last-child) {
+      padding-right: 20px;
+    }
+  }
+  &__num {
+    position: absolute;
+    top: -9px;
+    left: 14px;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    background-color: $accent-color;
+  }
+}
+
 
 @import 'media';
