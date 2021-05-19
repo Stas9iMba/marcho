@@ -35,13 +35,13 @@
       border-bottom: 1px solid $accent-color;
       color: $accent-color;
       transition: color 0.2s linear;
-      @extend %roboto-500;
+      @extend %roboto-700;
     }
   }
 
   &__list-link--active {
     color: $accent-color;
-    @extend %roboto-500;
+    @extend %roboto-700;
   }
 }
 
@@ -146,8 +146,6 @@
     margin-bottom: 25px;
   }
 
-  &__form {}
-
   &__form-input {
     max-width: 320px;
     width: 100%;
@@ -186,6 +184,5 @@
     margin-left: 25px;
   }
 }
-
 
 @import 'media';
