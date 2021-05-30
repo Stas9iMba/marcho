@@ -188,16 +188,15 @@
   background-color: $bg;
   padding: 65px 0 44px;
 
-  &__container{
+  &__container {
     max-width: 1560px;
   }
-  &__inner {}
 
   &__item {
     display: flex !important;
     justify-content: space-between;
   }
-  &__content{
+  &__content {
     padding-left: 175px;
     padding-top: 125px;
   }
@@ -219,14 +218,14 @@
     @extend %btn;
     padding: 14px 35px;
   }
-  .slick-dots{
+  .slick-dots {
     display: flex;
     justify-content: center;
     margin-top: -70px;
-    li{
-        padding: 0 5px;
-        line-height: 0;
-      button{
+    li {
+      padding: 0 5px;
+      line-height: 0;
+      button {
         padding: 0;
         font-size: 0;
         background-color: transparent;
@@ -235,7 +234,7 @@
         border-radius: 50%;
         border: 1px solid transparent;
         position: relative;
-        &::before{
+        &::before {
           content: '';
           position: absolute;
           width: 6px;
@@ -247,10 +246,10 @@
           transform: translate(-50%, -50%);
         }
       }
-      &.slick-active{
-        button{
+      &.slick-active {
+        button {
           border-color: $accent-color;
-          &::before{
+          &::before {
             background-color: $accent-color;
           }
         }
@@ -258,7 +257,6 @@
     }
   }
 }
-
 
 .categories-info {
   padding: 120px 0;
@@ -268,7 +266,7 @@
   &__inner {
     background-image: url('../images/decor/categories-right-bg.png');
     background-repeat: no-repeat;
-  background-position: center right;
+    background-position: center right;
   }
 }
 
@@ -278,13 +276,11 @@
   margin-bottom: 110px;
   position: relative;
 
-
   &::before,
   &::after {
     content: '';
     position: absolute;
     z-index: -1;
-
   }
   &::before {
     background-image: url(../images/decor/info-before.svg);
@@ -292,7 +288,6 @@
     right: -20px;
     width: 65px;
     height: 52px;
-
   }
   &::after {
     background-image: url(../images/decor/info-after.svg);
@@ -419,6 +414,139 @@
     @extend %btn;
   }
 }
+
+.product {
+  padding: 105px 0 120px;
+  text-align: center;
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 45px 30px;
+    margin-bottom: 50px;
+  }
+  &__link {
+    text-transform: uppercase;
+    color: $title-color;
+    border: 1px solid $accent-color;
+    padding: 14px 27px;
+    @extend %roboto-400;
+
+    &:hover{
+      @extend %btn;
+
+
+    }
+  }
+}
+
+.product-item {
+  max-width: 370px;
+
+  &__img-box {
+    position: relative;
+    height: 370px;
+    overflow: hidden;
+    margin-bottom: 25px;
+  }
+
+  &__link-box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    background-color: #fff;
+    width: 220px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 22px;
+    box-shadow: 0px 5px 30px 0px rgba(152, 152, 152, 0.2);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateY(300%);
+    transition: all 0.3s;
+  }
+
+  &__link--line::before,
+  &__link--line::after {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 1px;
+    background-color: #ececec;
+    top: 10px;
+  }
+
+  &__link--line::before {
+    left: 70px;
+  }
+
+  &__link--line::after {
+    right: 70px;
+  }
+
+  &__images {
+    object-fit: cover;
+  }
+
+  &__link {
+    display: inherit;
+
+    path {
+      transition: all 0.3s linear;
+    }
+  }
+
+  &__link:hover {
+    path {
+      fill: $accent-color;
+    }
+  }
+
+  &:hover {
+    .product-item__link-box {
+      transform: translateY(0);
+    }
+  }
+
+  &__title {
+    color: $title-color;
+    padding: 15px 0 20px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: center;
+    @extend %roboto-500;
+  }
+
+  &__new-prise {
+    padding: 0 12px;
+    color: $title-color;
+  }
+
+  &__old-prise {
+    padding: 0 12px;
+    text-decoration: line-through;
+  }
+  &--sale{
+    .product-item__img-box::before{
+      content: 'SALE';
+      @extend %btn;
+      line-height: 1;
+      padding: 8px 12px;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+    }
+  }
+}
+
+.star {
+  display: flex;
+  margin: 0 auto;
+}
+
 
 
 @import 'media';
