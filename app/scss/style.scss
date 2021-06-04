@@ -706,6 +706,22 @@
   }
 }
 
+
+//////////////////////////////////////////////////////////
+
+.top{
+  &__container{
+    max-width: 1700px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    padding: 120px 0 140px;
+    text-align: center;
+  }
+}
+
+
 @import 'media';
 
 
