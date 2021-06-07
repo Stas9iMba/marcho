@@ -784,6 +784,40 @@
   }
 }
 
+.page-404 {
+  padding: 110px 0 120px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 570px;
+    width: 100%;
+  }
+
+  &__title {
+    color: #000;
+    @extend %roboto-700;
+    font-size: 48px;
+    margin-bottom: 40px;
+    line-height: 1;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+    max-width: 470px;
+  }
+
+  &__link {
+    @extend %btn;
+  }
+}
+
+//////////////////////////////////////////////////////////
+
 @import 'media';
 
 
