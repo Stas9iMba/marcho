@@ -43,7 +43,7 @@ $bg: #f6f6f6;
   cursor: pointer;
 }
 
-%checkbox-hidden{
+%checkbox-hidden {
   width: 1px;
   height: 1px;
   overflow: hidden;
@@ -54,6 +54,7 @@ $bg: #f6f6f6;
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }
+
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
 }
