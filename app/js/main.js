@@ -1,29 +1,43 @@
 $(function () {
+  $('.product-slide__small').slick({
+    asNavFor: '.product-slide__big',
+    focusOnSelect: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false,
+  });
+  $('.product-slide__big').slick({
+    asNavFor: '.product-slide__small',
+    draggable: false,
+    arrows: false,
+    fade: true,
+  });
 
   $('.shop-content__filter-btn').on('click', function () {
     $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
     $(this).addClass('shop-content__filter-btn--active');
   });
 
-  $('.button-list').on('click', function() {
+  $('.button-list').on('click', function () {
     $('.product-item').addClass('product-item--list');
   });
-  $('.button-gtid').on('click', function() {
+  $('.button-grid').on('click', function () {
     $('.product-item').removeClass('product-item--list');
   });
 
-  $(".filter-price__input").ionRangeSlider({
-    type: "double",
-    prefix: "$",
-    onStart : function (data) {
+  $('.filter-price__input').ionRangeSlider({
+    type: 'double',
+    prefix: '$',
+    onStart: function (data) {
       $('.filter-price__from').text(data.from);
       $('.filter-price__to').text(data.to);
     },
     onChange: function (data) {
       $('.filter-price__from').text(data.from);
       $('.filter-price__to').text(data.to);
-  },
-});
+    },
+  });
 
   $('.top-slider__inner').slick({
     dots: true,
@@ -34,9 +48,9 @@ $(function () {
   });
 
   $('.star').rateYo({
-    starWidth: "17px",
-    normalFill: "#ccccce",
-    ratedFill: "#ffc35b",
+    starWidth: '17px',
+    normalFill: '#ccccce',
+    ratedFill: '#ffc35b',
     readOnly: true,
   });
 
@@ -52,7 +66,7 @@ $(function () {
       days,
       hours,
       minutes,
-      seconds
+      seconds,
     };
   }
 
@@ -80,8 +94,6 @@ $(function () {
     const timeinterval = setInterval(updateClock, 1000);
   }
 
-  const deadline = $('.promo__clock').attr('data-time')
+  const deadline = $('.promo__clock').attr('data-time');
   initializeClock('promo__clock', deadline);
-
-
 });
