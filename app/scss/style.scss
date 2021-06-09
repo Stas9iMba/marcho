@@ -1279,6 +1279,41 @@
   }
 }
 
+.jq-selectbox__select {
+  margin-left: 30px;
+  height: 32px;
+  padding: 0 30px 0 0;
+  border: none;
+  background: transparent;
+  @extend %quicksand-500;
+  color: $default-color;
+  text-shadow: none;
+  box-shadow: none;
+  width: 150px;
+
+  &:hover {
+    background: transparent;
+  }
+}
+
+.shop-content__filter-show{
+  .jq-selectbox__select {
+    width: auto;
+  }
+}
+.jq-selectbox__trigger {
+  border-left: none;
+}
+
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  width: 10px;
+  height: 5px;
+  border: none;
+  background-image: url('../images/icons/arrow-down.svg');
+}
 
 //////////////////////////////////////////////////////////
 
