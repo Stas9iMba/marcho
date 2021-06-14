@@ -1974,5 +1974,54 @@
   }
 }
 
+.latest-post {
+  &__title {
+    font-size: 18px;
+    @extend %roboto-400;
+    line-height: 28px;
+    color: $title-color;
+    margin-bottom: 10px;
+
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ececec;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__img-link {
+    display: block;
+    margin-right: 20px;
+    min-width: 80px;
+
+  }
+
+  &__img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+
+  &__date {
+    padding-left: 26px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      left: 0;
+      top: 5px;
+      background-image: url(../images/blog/date.svg);
+    }
+  }
+}
+
 
 @import 'media';
