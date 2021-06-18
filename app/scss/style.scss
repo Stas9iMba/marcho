@@ -19,6 +19,10 @@
     display: flex;
   }
 
+  &__btn {
+    display: none;
+  }
+
   &__list-item {
     &:not(:last-child) {
       padding-right: 35px;
@@ -174,11 +178,16 @@
   justify-content: space-between;
   align-items: center;
   font-size: 12px;
+  flex-wrap: wrap;
 
   &__accept-img {
     display: inline;
     vertical-align: middle;
     margin-left: 25px;
+  }
+
+  &__copy {
+    margin-right: 50px;
   }
 }
 
