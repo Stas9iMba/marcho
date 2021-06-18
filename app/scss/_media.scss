@@ -120,6 +120,13 @@
       margin-bottom: 30px;
     }
   }
+
+  .footer-top{
+    &__title{
+      cursor: pointer;
+      pointer-events: auto;
+    }
+  }
 }
 
 @media(max-width:620px) {
