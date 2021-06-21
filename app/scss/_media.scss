@@ -18,6 +18,51 @@
     }
   }
 
+  .page-404 {
+    &__img {
+      width: 40%;
+    }
+  }
+
+  .blog-page {
+
+    .person,
+    .latest-post,
+    .filter-category,
+    .filter-popular {
+      display: none;
+    }
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__content {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &__img {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    &__aside {
+      width: 100%;
+      order: -1;
+    }
+  }
+
+  .filter-search {
+    &:hover {
+      box-shadow: 0px 20px 60px 0px rgba(187, 187, 187, 0.5);
+    }
+
+    &__input {
+      width: 100%;
+    }
+  }
+
 }
 
 @media(max-width:1200px) {
@@ -417,6 +462,63 @@
     }
   }
 
+  .top {
+    margin-bottom: 60px;
+  }
+
+  .blog-page {
+    padding-bottom: 60px;
+
+    &__item-box {
+      padding: 20px;
+    }
+
+    &__img {
+      height: 260px;
+    }
+
+    &__item-link {
+      font-size: 20px;
+      line-height: 1.1;
+    }
+  }
+
+  .blog-one {
+    &__text {
+      padding: 20px 10px;
+    }
+
+    &__info {
+      display: block;
+    }
+
+    &__info-item {
+      margin-bottom: 5px;
+    }
+
+    &__box {
+      flex-wrap: wrap;
+    }
+
+    &__tags {
+      padding-right: 10px;
+    }
+  }
+
+  .comments-form {
+    &__box-input {
+      display: block;
+    }
+
+    &__text-input {
+      max-width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
 }
 
 @media(max-width:500px) {
@@ -457,6 +559,13 @@
       margin: 10px 25px;
     }
   }
+
+  .comments-form {
+    &__btn {
+      display: block;
+      width: 100%;
+    }
+  }
 }
 
 @media(max-width:420px) {
@@ -473,6 +582,28 @@
 
     &__clock-item {
       margin: 8px;
+    }
+  }
+
+  .page-404 {
+    padding: 60px 0;
+  }
+
+  .blog-one {
+    &__author-img {
+      display: none;
+    }
+
+    &__text {
+      blockquote {
+        padding: 15px;
+      }
+    }
+  }
+
+  .comments {
+    &__img {
+      display: none;
     }
   }
 }
@@ -512,6 +643,38 @@
       img {
         height: 220px;
       }
+    }
+  }
+
+  .modal {
+    &__link {
+      margin: 0 20px;
+    }
+  }
+
+  .blog-page {
+    &__item-box {
+      padding: 10px 5px;
+    }
+
+    &__img {
+      height: 170px;
+    }
+
+    &__slider {
+      .slick-prev {
+        right: 10px;
+      }
+
+      .slick-next {
+        left: 10px;
+      }
+    }
+  }
+
+  .filter {
+    &__item {
+      padding: 25px 15px;
     }
   }
 }
