@@ -693,7 +693,7 @@
   background-size: cover;
   padding: 150px 0 160px;
   text-align: center;
-  height: 690px;
+  min-height: 690px;
 
   &__inner {
     max-width: 570px;
