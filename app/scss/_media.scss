@@ -63,6 +63,80 @@
     }
   }
 
+  .shop {
+    &__inner {
+      display: block;
+    }
+
+    &__filters {
+      width: 100%;
+      margin-right: 0;
+      display: none;
+      position: absolute;
+      top: 20px;
+      left: 0;
+      z-index: 100;
+      background-color: #fff;
+
+      .filter-search {
+        &:hover {
+          box-shadow: none;
+        }
+      }
+    }
+
+    &__filter-btn {
+      display: block;
+      // border: none;
+      background-color: $accent-color;
+      padding: 0;
+      width: 60px;
+      height: 60px;
+      position: fixed;
+      right: 0;
+      z-index: 101;
+      bottom: 50px;
+      border-radius: 50%;
+      box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+      cursor: pointer;
+
+      &:hover {
+        background-color: grey;
+      }
+
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .shop-content {
+    &__inner {
+      display: grid;
+      grid-gap: 30px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__nogrid {
+      display: flex;
+    }
+  }
+
+  .product-one {
+    &__slide {
+      width: auto;
+      margin-right: 30px;
+    }
+  }
+
+  .product-slide {
+    &__small {
+      display: none;
+    }
+
+  }
+
+
 }
 
 @media(max-width:1200px) {
@@ -100,6 +174,7 @@
     }
   }
 
+
 }
 
 @media(max-width:1100px) {
@@ -134,6 +209,31 @@
         grid-column: auto;
         background-position: center right;
       }
+    }
+  }
+
+  .contact {
+    &__inner {
+      display: block;
+    }
+
+    &__info {
+      margin-right: 0;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    &__form {
+      box-shadow: none;
+      padding: 0;
+    }
+
+    &__form-box {
+      display: block;
+    }
+
+    &__form-input {
+      max-width: 100%;
     }
   }
 }
@@ -197,6 +297,29 @@
       }
     }
   }
+
+  .product-one {
+    &__inner {
+      display: block;
+    }
+
+    &__content {
+      width: 100%;
+      margin-top: 35px;
+    }
+  }
+
+  .product-slide {
+    &__big {
+      width: 100%;
+
+      img {
+        width: auto;
+        margin: 0 auto;
+      }
+    }
+
+  }
 }
 
 @media (max-width: 992px) {
@@ -211,6 +334,19 @@
   .header {
     &__inner {
       padding-right: 0;
+    }
+
+    .shop-content {
+      &__inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .related {
+      &__items {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+      }
     }
   }
 
@@ -360,7 +496,28 @@
       grid-template-columns: repeat(1, 1fr);
     }
   }
+
+  .comments-form {
+    &__label {
+      display: block;
+      margin-right: 0;
+    }
+
+  }
 }
+
+@media(max-width:700px) {
+  .shop-content {
+    &__filter-buttons {
+      display: none;
+    }
+
+    &__filter {
+      padding: 20px 25px 20px 0;
+    }
+  }
+}
+
 
 @media(max-width:620px) {
   .footer-bottom {
@@ -519,6 +676,24 @@
     }
   }
 
+  .map {
+    margin-bottom: 60px;
+  }
+
+  .shop-content {
+    &__inner {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .product-page {
+    margin-bottom: 30px;
+  }
+
+  .related {
+    padding-bottom: 60px;
+  }
+
 }
 
 @media(max-width:500px) {
@@ -564,6 +739,82 @@
     &__btn {
       display: block;
       width: 100%;
+    }
+  }
+
+  .contact {
+    &__info-title {
+      font-size: 28px;
+      line-height: 34px;
+    }
+  }
+
+  .contact {
+    &__form-btn {
+      width: 100%;
+    }
+  }
+
+  .pagination {
+    &__arrow {
+      display: none;
+    }
+  }
+
+  .product-slide {
+    &__big img {
+      height: 400px;
+    }
+    &__big-item {
+      height: auto;
+    }
+  }
+
+  .product-one {
+    &__box {
+      display: block;
+    }
+
+    &__price {
+      margin-bottom: 5px;
+      padding-left: 5px;
+    }
+
+    &__item-btn {
+      margin-left: 0;
+    }
+
+  }
+
+  .product-filter__size label {
+    margin-right: -1px;
+  }
+
+  .product-tabs {
+    &__top-item {
+      display: block;
+      margin-bottom: 10px;
+      padding-top: 10px;
+    }
+
+    &__top-item:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+
+  .comments {
+    &__img {
+      display: none;
+    }
+
+    &__content-date {
+      display: none;
+    }
+  }
+
+  .related {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }
@@ -677,4 +928,18 @@
       padding: 25px 15px;
     }
   }
+
+  .contact {
+    &__info-item {
+      padding-left: 60px;
+
+      &::before {
+        height: 50px;
+        width: 50px;
+        left: 3px;
+        top: 0px;
+      }
+    }
+  }
+
 }
